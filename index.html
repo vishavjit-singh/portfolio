@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Vishavjit Singh Saini</title>
-<meta name="description" content="Vishavjit Singh Saini, Data Engineer at Opala. Machine learning, computer vision, MLOps and agentic automation.">
+<meta name="description" content="Vishavjit Singh Saini, Data Engineer at Opala. Azure and Databricks data pipelines, API test automation, machine learning and computer vision.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -271,7 +271,7 @@ footer { padding: 28px 0 40px; color: var(--muted); display: flex; justify-conte
       <span class="status mono"><span class="dot" aria-hidden="true"></span>Data Engineer at Opala · since Jul 2026</span>
       <h1>Vishavjit<br>Singh <span class="last">Saini</span></h1>
       <p class="typed" aria-live="polite">I build <b id="typed">data pipelines</b><span class="caret" aria-hidden="true"></span></p>
-      <p class="lede">Computer Science engineer working across <strong>data engineering, machine learning and generative AI</strong>. I have shipped face-recognition attendance systems, agentic n8n automations, MLOps pipelines with MLflow and DVC, and an AI-assisted career platform.</p>
+      <p class="lede">Data engineer who tests like a QA engineer. At <strong>Opala</strong> I've built Azure Data Lake and Databricks pipelines into Delta Lake, and I now own test design and automation for a healthcare rules engine. Before that I shipped <strong>face-recognition attendance, agentic n8n automations and MLOps pipelines</strong>.</p>
       <div class="actions">
         <a class="btn" href="#projects">See my projects</a>
         <button class="btn ghost" type="button" id="heroCopy">Copy email</button>
@@ -302,6 +302,39 @@ footer { padding: 28px 0 40px; color: var(--muted); display: flex; justify-conte
         <div class="body">
           <h3>Opala <span class="pill">current</span></h3>
           <div class="meta">Data Engineer</div>
+
+          <div class="job">
+            <h4>Rules Engine QA: Coverage Requirements Discovery (CRD) workflow</h4>
+            <p>Owns test design and automation for the rules engine behind the CRD workflow, working against real deployed Azure environments rather than mocks.</p>
+            <details>
+              <summary>responsibilities</summary>
+              <ul>
+                <li>Wrote the full test plan from scratch: scope, environments, test-data strategy, entry and exit criteria, risk register and coverage matrix.</li>
+                <li>Catalogued 77 test cases across positive, negative, edge, fallback and functional tiers. Where specs were silent or out of date, I grounded cases in the source code.</li>
+                <li>Ran black-box testing against VPN-gated environments with signed JWT authentication and tenant-scoped requests.</li>
+                <li>Built a pytest regression suite parameterised by environment, with a shared HTTP client covering every endpoint in scope.</li>
+                <li>Found and fixed two security defects in product code, verified against the full backend test suite with no regressions.</li>
+                <li>Traced a reference-data quality issue to its source extract, quantified the impact and raised it as a tracked engineering decision.</li>
+                <li>Built the Jira/Xray structure: test plan, test issues, per-environment executions, and a mapping from automated test IDs to Jira keys for result import.</li>
+              </ul>
+              <div class="meta2 mono">pytest · JWT · Jira/Xray · Azure Container Apps · Key Vault · Docker Compose · GitHub Actions (OIDC)</div>
+            </details>
+          </div>
+
+          <div class="job">
+            <h4>Azure data engineering: Data Lake and Databricks</h4>
+            <p>Built ingestion pipelines into Azure Data Lake Storage through raw/bronze, curated/silver and consumption/gold layers, with Databricks processing into Delta Lake.</p>
+            <details>
+              <summary>responsibilities</summary>
+              <ul>
+                <li>Landed raw data in ADLS with validation gates before each layer moved downstream.</li>
+                <li>Cleaned, transformed and joined data in Databricks notebooks (PySpark and SQL), writing versioned Delta Lake tables.</li>
+                <li>Ran data-quality checks for schema conformance, nulls and duplicates, and referential integrity against source.</li>
+                <li>Handled sensitive data under least-privilege access, with column-level treatment of sensitive fields and audit-conscious processing.</li>
+              </ul>
+              <div class="meta2 mono">Azure Data Lake Storage · Databricks · PySpark · SQL · Delta Lake</div>
+            </details>
+          </div>
         </div>
       </article>
 
@@ -515,7 +548,7 @@ footer { padding: 28px 0 40px; color: var(--muted); display: flex; justify-conte
   tick(); setInterval(tick, 1000);
 
   /* ---------- typed roles ---------- */
-  var phrases = ["data pipelines", "ML systems that ship", "computer vision models", "agentic automations", "MLOps workflows"];
+  var phrases = ["data pipelines", "Delta lakehouses", "test suites that catch real bugs", "ML systems that ship", "computer vision models", "agentic automations", "MLOps workflows"];
   var typed = document.getElementById("typed");
   if (!reduce) {
     var pi = 0, ci = phrases[0].length, deleting = true, wait = 1800;
@@ -536,6 +569,12 @@ footer { padding: 28px 0 40px; color: var(--muted); display: flex; justify-conte
 
   /* ---------- projects & skills ---------- */
   var projects = [
+    { title: "Rules Engine Test Suite (CRD)", org: "Opala", when: "2026", areas: ["QA & Testing"],
+      blurb: "Test plan, 77 cases across five tiers, and a pytest regression suite run against deployed Azure environments with JWT, tenant-scoped requests.",
+      stack: ["Python", "pytest", "JWT", "Jira/Xray", "Azure", "Docker Compose", "GitHub Actions"] },
+    { title: "Azure Lakehouse Pipelines", org: "Opala", when: "2026", areas: ["Data Engineering"],
+      blurb: "Bronze, silver and gold layers on Azure Data Lake, with Databricks PySpark and SQL into Delta Lake, behind data-quality gates and governed sensitive-data handling.",
+      stack: ["Azure Data Lake", "Databricks", "PySpark", "SQL", "Delta Lake"] },
     { title: "AI-Powered Employee Attendance System", org: "WE RNS IT Solutions", when: "2026", areas: ["Computer Vision"],
       blurb: "Real-time face recognition on a smart biometric device, with attendance synced to a central backend over REST.",
       stack: ["Python", "OpenCV", "InsightFace", "FaceNet", "ONNX Runtime", "NumPy", "Pandas", "FastAPI", "Flask", "MySQL", "SQLite", "Git", "Linux"] },
@@ -569,7 +608,9 @@ footer { padding: 28px 0 40px; color: var(--muted); display: flex; justify-conte
     { name: "machine learning & ai", items: ["TensorFlow", "PyTorch", "Scikit-learn", "Neural Networks", "Computer Vision", "NLP", "OpenCV", "OpenAI APIs"] },
     { name: "data & mlops", items: ["Pandas", "NumPy", "MLflow", "DVC", "Matplotlib", "Seaborn", "AWS", "Docker"] },
     { name: "backend & automation", items: ["FastAPI", "Flask", "n8n", "Webhooks", "Redis"] },
-    { name: "databases", items: ["MySQL", "PostgreSQL", "MariaDB", "SQLite", "NoSQL"] }
+    { name: "azure & big data", items: ["Azure Data Lake", "Databricks", "PySpark", "Delta Lake", "Azure"] },
+    { name: "testing & qa", items: ["pytest", "JWT", "Jira/Xray", "Docker Compose", "GitHub Actions"] },
+    { name: "databases", items: ["MySQL", "PostgreSQL", "MariaDB", "SQLite", "NoSQL", "SQL"] }
   ];
   document.getElementById("projCount").textContent = projects.length;
   var areas = ["All"];

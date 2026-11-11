@@ -1,6 +1,6 @@
 # Vishavjit Singh Saini · Portfolio
 
-Personal portfolio site for **Vishavjit Singh Saini**, Data Engineer at Opala. It covers machine learning, computer vision, MLOps and agentic automation work.
+Personal portfolio site for **Vishavjit Singh Saini**, Data Engineer at Opala. It covers Azure and Databricks data engineering, API test automation, machine learning, computer vision and agentic automation.
 
 **Live site:** https://vishavjit-singh.github.io/portfolio/
 
