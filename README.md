@@ -1,43 +1,47 @@
-# Vishavjit Singh Saini – Developer CV Website
+# Vishavjit Singh Saini · Portfolio
 
-A responsive and modern developer CV website built using HTML, CSS, and Feather Icons. This site showcases education, skills, projects, and achievements in a professional layout.
+Personal portfolio site for **Vishavjit Singh Saini**, Data Engineer at Opala. It covers machine learning, computer vision, MLOps and agentic automation work.
 
-![Preview](Screenshot1.png)
-![Preview](Screenshot2.png)
+**Live site:** https://vishavjit-singh.github.io/portfolio/
 
----
+<p>
+  <img src="docs/screenshot-desktop.png" alt="Desktop view" width="68%">
+  <img src="docs/screenshot-mobile.png" alt="Mobile view" width="24%">
+</p>
 
-## 📌 Version
+## Features
 
-**Current Version:** `v1.0.0`
+- **Live pipeline animation** in the hero, drawn on `<canvas>`: data packets flow from raw data → ingest → transform → train → serve
+- **Career run log**: an expandable timeline of roles and projects
+- **Queryable projects**: filter by area, or click any skill to highlight the projects that used it
+- **Live details**: time in industry is computed from the start date, plus an IST clock
+- **Light / dark / auto theme**, remembered per browser
+- Responsive down to phone width, keyboard-accessible, and respects `prefers-reduced-motion`
+- One self-contained `index.html`: no build step and no framework. Only Google Fonts load from outside
 
-### ✅ Features in this release:
-- Responsive layout with sidebar navigation
-- Downloadable CV button
-- Integrated Feather Icons for social links
-- Project list with real-world applications
-- Awards, experience, and skills sections
-- Fully mobile-optimized
+## Tech
 
----
+HTML5 · CSS (custom properties, grid, `color-mix`) · vanilla JavaScript · Canvas 2D
 
-## 🛠️ Tech Stack
-
-| Technology | Purpose                     |
-|------------|-----------------------------|
-| HTML5      | Page structure              |
-| CSS3       | Styling & responsiveness    |
-| Google Fonts (Montserrat) | Clean typography |
-| Feather Icons | Lightweight SVG icons     |
-
----
-
-## 🚀 Getting Started
-
-To run this project locally:
-
-### 1. Clone the Repository
+## Run locally
 
 ```bash
-git clone https://github.com/vishavjit-singh/portfolio-cv.git
-cd portfolio-cv
+git clone https://github.com/vishavjit-singh/portfolio.git
+cd portfolio
+python -m http.server 8000   # then open http://localhost:8000
+```
+
+## Deploy
+
+The site is static. It is served by **GitHub Pages** from the `main` branch root (Settings → Pages → Deploy from a branch → `main` / `/ (root)`). It also works as-is on Cloudflare Pages, Netlify or any static host.
+
+## Versions
+
+| Version | Notes |
+|---|---|
+| **v2.0** (current) | Redesigned single-page portfolio with interactive projects and skills, updated for the Data Engineer role at Opala |
+| v1.0 | Original sidebar CV page (HTML, CSS, Feather Icons). Kept in [`v1/`](v1/) |
+
+## Contact
+
+✉️ singhvishavjit03@gmail.com · [LinkedIn](https://www.linkedin.com/in/vishavjit-singh-7011211ab/) · [GitHub](https://github.com/vishavjit-singh)
