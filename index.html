@@ -571,16 +571,16 @@ footer { padding: 28px 0 40px; color: var(--muted); display: flex; justify-conte
   var projects = [
     { title: "Rules Engine Test Suite (CRD)", org: "Opala", when: "2026", areas: ["QA & Testing"],
       blurb: "Test plan, 77 cases across five tiers, and a pytest regression suite run against deployed Azure environments with JWT, tenant-scoped requests.",
-      stack: ["Python", "pytest", "JWT", "Jira/Xray", "Azure", "Docker Compose", "GitHub Actions"] },
+      stack: ["Python", "pytest", "Test planning", "API testing", "Black-box testing", "Regression automation", "JWT", "Jira/Xray", "Azure", "Azure Container Apps", "Azure Key Vault", "Docker Compose", "GitHub Actions"] },
     { title: "Azure Lakehouse Pipelines", org: "Opala", when: "2026", areas: ["Data Engineering"],
       blurb: "Bronze, silver and gold layers on Azure Data Lake, with Databricks PySpark and SQL into Delta Lake, behind data-quality gates and governed sensitive-data handling.",
-      stack: ["Azure Data Lake", "Databricks", "PySpark", "SQL", "Delta Lake"] },
+      stack: ["Azure Data Lake", "Databricks", "PySpark", "SQL", "Delta Lake", "Medallion architecture", "Data quality", "Data governance", "Azure"] },
     { title: "AI-Powered Employee Attendance System", org: "WE RNS IT Solutions", when: "2026", areas: ["Computer Vision"],
       blurb: "Real-time face recognition on a smart biometric device, with attendance synced to a central backend over REST.",
-      stack: ["Python", "OpenCV", "InsightFace", "FaceNet", "ONNX Runtime", "NumPy", "Pandas", "FastAPI", "Flask", "MySQL", "SQLite", "Git", "Linux"] },
+      stack: ["Python", "OpenCV", "InsightFace", "FaceNet", "ONNX Runtime", "NumPy", "Pandas", "FastAPI", "Flask", "REST APIs", "MySQL", "SQLite", "Git", "Linux"] },
     { title: "Agentic AI Workflow Automation", org: "WE RNS IT Solutions", when: "2026", areas: ["Generative AI", "Automation"],
       blurb: "n8n workflows that combine LLMs, OCR and external APIs to automate publishing, approvals, notifications and data sync.",
-      stack: ["n8n", "Python", "JavaScript", "OpenAI APIs", "Google Workspace APIs", "Webhooks", "MySQL", "PostgreSQL", "Docker", "Git", "Linux"] },
+      stack: ["n8n", "Python", "JavaScript", "OpenAI APIs", "Google Workspace APIs", "REST APIs", "Webhooks", "MySQL", "PostgreSQL", "Docker", "Git", "Linux"] },
     { title: "Career Counselling & Education Platform", org: "Bricleweb Infotech", when: "2025–26", areas: ["Generative AI", "Full-stack"],
       blurb: "Marketplace for students, counsellors and institutions with an AI counsellor, Razorpay payments and race-safe credits.",
       stack: ["PHP 8.2", "MariaDB", "MySQL", "PDO", "Redis", "OpenAI APIs", "Razorpay", "Tailwind CSS", "Alpine.js"] },
@@ -593,7 +593,7 @@ footer { padding: 28px 0 40px; color: var(--muted); display: flex; justify-conte
     { title: "Retail Sales Data Pipeline", org: "Open source", when: "2026", areas: ["Data Engineering"],
       link: "https://github.com/vishavjit-singh/retail-sales-data-pipeline",
       blurb: "Incremental ETL into a star-schema warehouse with a data-quality gate, quarantine table and one transaction per run.",
-      stack: ["Python", "Pandas", "SQLite", "Docker", "GitHub Actions"] },
+      stack: ["Python", "Pandas", "SQL", "SQLite", "Data quality", "Docker", "GitHub Actions"] },
     { title: "Crop Disease Prediction API", org: "Open source", when: "2024", areas: ["Computer Vision"],
       link: "https://github.com/vishavjit-singh/Crop_Disease_Prediction",
       blurb: "Two-stage CNN: a router identifies corn, wheat or rice, then a crop-specific model diagnoses the disease. Served with FastAPI.",
@@ -604,13 +604,13 @@ footer { padding: 28px 0 40px; color: var(--muted); display: flex; justify-conte
       stack: ["Python", "Scikit-learn", "Pandas", "Docker"] }
   ];
   var skillGroups = [
-    { name: "languages", items: ["Python", "Java", "C", "C++", "JavaScript", "PHP 8.2"] },
-    { name: "machine learning & ai", items: ["TensorFlow", "PyTorch", "Scikit-learn", "Neural Networks", "Computer Vision", "NLP", "OpenCV", "OpenAI APIs"] },
-    { name: "data & mlops", items: ["Pandas", "NumPy", "MLflow", "DVC", "Matplotlib", "Seaborn", "AWS", "Docker"] },
-    { name: "backend & automation", items: ["FastAPI", "Flask", "n8n", "Webhooks", "Redis"] },
-    { name: "azure & big data", items: ["Azure Data Lake", "Databricks", "PySpark", "Delta Lake", "Azure"] },
-    { name: "testing & qa", items: ["pytest", "JWT", "Jira/Xray", "Docker Compose", "GitHub Actions"] },
-    { name: "databases", items: ["MySQL", "PostgreSQL", "MariaDB", "SQLite", "NoSQL", "SQL"] }
+    { name: "data engineering", items: ["Azure Data Lake", "Databricks", "PySpark", "Delta Lake", "Medallion architecture", "SQL", "Pandas", "NumPy", "Data quality", "Data governance"] },
+    { name: "testing & qa", items: ["Test planning", "API testing", "Black-box testing", "Regression automation", "pytest", "JWT", "Jira/Xray"] },
+    { name: "cloud & devops", items: ["Azure", "Azure Container Apps", "Azure Key Vault", "Docker", "Docker Compose", "GitHub Actions", "AWS", "Linux", "Git"] },
+    { name: "machine learning & ai", items: ["TensorFlow", "PyTorch", "Scikit-learn", "Neural Networks", "Computer Vision", "NLP", "OpenCV", "OpenAI APIs", "MLflow", "DVC"] },
+    { name: "backend & automation", items: ["FastAPI", "Flask", "REST APIs", "n8n", "Webhooks", "Redis"] },
+    { name: "languages", items: ["Python", "SQL", "JavaScript", "PHP 8.2", "Java", "C", "C++"] },
+    { name: "databases", items: ["PostgreSQL", "MySQL", "MariaDB", "SQLite", "NoSQL"] }
   ];
   document.getElementById("projCount").textContent = projects.length;
   var areas = ["All"];
