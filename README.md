@@ -2,7 +2,7 @@
 
 Personal portfolio site for **Vishavjit Singh Saini**, Data Engineer at Opala. It covers Azure and Databricks data engineering, API test automation, machine learning, computer vision and agentic automation.
 
-**Live site:** https://vishavjit-saini.pages.dev/
+**Live site:** https://vishavjit-singh.pages.dev/
 
 <p>
   <img src="docs/screenshot-desktop.png" alt="Desktop view" width="68%">
@@ -33,7 +33,7 @@ python -m http.server 8000   # then open http://localhost:8000
 
 ## Deploy
 
-The site is static and hosted on **Cloudflare Pages** at https://vishavjit-saini.pages.dev/. To update it, upload `index.html` as a new deployment in the Cloudflare dashboard. It also works as-is on GitHub Pages, Netlify or any static host.
+The site is static and hosted on **Cloudflare Pages** at https://vishavjit-singh.pages.dev/. To update it, upload `index.html` as a new deployment in the Cloudflare dashboard. It also works as-is on GitHub Pages, Netlify or any static host.
 
 ## Versions
 
